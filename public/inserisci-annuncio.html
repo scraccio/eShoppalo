@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserisci un annuncio | eShoppalo</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/inserisci-annuncio.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="menu-button" onclick="openMenu();">☰</div>
+    <div class="header-menu">
+        <a class="home-button">Home</a>
+        <a class="catalogue-button">Catalogo</a>
+        <a class="login-button">Accedi</a>
+    </div>
+
+    <div class="header-icons">
+        <a class="home-button">Home</a>
+        <a class="catalogue-button">Catalogo</a>
+        <a class="login-button">Accedi</a>
+    </div>
+    <div class="header"></div>
+
+    <div class="header1">
+        <div class="title">
+            <img class="cart-icon" src="assets/img/cart.png">
+            <div class="title-text">eShoppalo</div>
+        </div>
+    </div>
+
+    <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop id="stop1" stop-color="rgba(218, 17, 17, 1)" offset="0%"></stop>
+                <stop id="stop2" stop-color="rgba(218, 17, 17, 1)" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <path class="sun" fill="url(#sw-gradient)"
+            d="M11.3,-16.5C16.8,-14,24.9,-14.5,25.8,-12C26.7,-9.4,20.3,-3.7,17.3,1C14.4,5.8,14.9,9.6,14.5,15.6C14,21.5,12.5,29.6,7.8,34.9C3,40.1,-5.1,42.6,-8.7,37.8C-12.2,33,-11.2,20.9,-14.8,14.3C-18.3,7.6,-26.3,6.3,-31.2,1.8C-36,-2.7,-37.7,-10.3,-33.1,-13C-28.6,-15.7,-17.9,-13.4,-11.3,-15.4C-4.8,-17.5,-2.4,-23.8,0.2,-24.2C2.9,-24.6,5.7,-19,11.3,-16.5Z"
+            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+            style="transition: all 0.3s ease 0s;"></path>
+    </svg>
+
+    <div class="main">
+
+        <div class="step-text">Partiamo dal facile.<br>Inserisci i dati del gioco.</div>
+        <div class="search-bar-container">
+            <input placeholder='Titolo' type="text" class="search-bar" onkeyup="filtra();"></input>
+        </div>
+        <div class="game-data-container">
+            <div class="game-status">
+                <select name="condizioni">
+                    <option value="Seleziona la condizione">--Seleziona la condizione--</option>
+                    <option value="Nuovo">Nuovo</option>
+                    <option value="Ottimo">Ottimo</option>
+                    <option value="Buono">Buono</option>
+                    <option value="Accettabile">Accettabile</option>
+                    <option value="Solo cartuccia">Solo cartuccia</option>
+                </select>
+            </div>
+            <div class="special-text">È un'edizione speciale?</div>
+            <label class="game-special">
+                <input name="speciale" class="speciale" type="checkbox"></input>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="buttons">
+            <div class="prev-button">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfZJREFUSEutVu11AjEMkze4EboBjHBsQjeBUToJdAPYoN2ADdKXDzj7YiW5tvnFIxfLlmQngv9cAiCMBZT0bedAte0cYnHY2fj/a21IuF9WMxOBAW4m8eesbIBxYFbjr2SCrtiJwLSsktiK/gRmmE6VJZcJAW8Abm2xeULG1b4DbWgBpgBcgAR8aIPXuj67jWpM2JyQQfdl/xOCebR3jXk3mHUFKndBmAPwiIoJAsd3qMxU97tyXekdwIwEul4s4or2xbgla72ffyvQ9M09ZHoVKO8IxkRP44peIMwQPNY0VQUUIphhW8AFVPYl66jlEQiP1P0Nfcr2N4AvpgTTeBLgEgT7CMDGbgrKkzgDOGkmdLa54nJYxYjVXgHsur7jXjojyIlR06Nag0eq3xPVbKLZ/yPNmerasPx2KjHWlccRGaeVC07ZIabn+S/tdIVgVwzlgLdHo/GhktV5CFSi28oFNwRducMlMc/TqcZcS+muYyraBTjkkblhFZsTc9mKVTsp8DTFPgJwtP7pNLkaLJxqX/14LV7LxVAuiTGbm9tpkULPam6Wxe3pmzGaPVf7xDCzdLTUCjXHnXlz2aALdMex+jLgU2wZYKad6pGZwzV94hwa89Ur9Bh/zUzsC6RfuHnQd54vLL0NVdauZtVUbHY06SSht38Au4rgJfRgxSAAAAAASUVORK5CYII=" />
+            </div>
+            <div class="next-button">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAg9JREFUSEudloFRwzAMRZ82yAZ0A9gAMgmjwCawSRmhbMAI2cCcHdeRY8k25K53bRz7R1//f1UolwDh+Km+NSv5xnFfEELe3Sy6Z+YFH3j8cjN7QT8Vvw+rnDuWfPLc0w5wvdmm1HvlwX3ViUJ10yevCWfOQk2jhu7pw5CXUfGcZqZpqKg2CukIID39BPyAbAdbc9hiU+GVp21DBL0i/BBYBTbLjOkk47gpVTs1fAHP+5rchLAG2NIvNxFqY5oR4m1W9xcggj/mA24IK2GOdlWxT28n0ZZwBifTPii7Ap4RiO5ZrrStHFYy7Z61WnHNiLJFd8Bl6+W/ESDl1oXAwzir0xMR/BNkyczdQFYISXBnIe1Ue/EC78Bbl4SuCrPahe08+JwAKX49gA2ACdt8Ay97v9s07BnvAsTPjDkXhA+CLLmvCjS7Xfm7tZPBa3c67YuLwDWQ0ixeBdSLYTe5xn0t7YiiuhJBd5SqUsN+iT53SHjAp74W0AzwTbj3tO9Lh+pWCMYA2EGFp6zYpqe1NDJD+Q1bOw3Uq5Y/gVeL3qZWo9FOj41/jSVT7mMuqTcOiXhly8zE3qFwfWS9U88N27SR7nhtTVFeKKkz//Tv0KaxfsMUmQawHkJ9O2kveIZs0qX7YGG3mk4eO+PODcLTEax/rlfxIF2auV4sdLTAmce6Z4OY7hbr0/6/5Po7sw1Hv87F8yIaoMWhAAAAAElFTkSuQmCC" />
+            </div>
+        </div>
+    </div>
+
+    <div class="steps">
+        <div class="step1 steps-big">
+            <div>1</div>
+        </div>
+        <div class="step2 steps-small">
+            <div>2</div>
+        </div>
+        <div class="step3 steps-small">
+            <div>3</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+        integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <script src="assets/js/checkLogged.js"></script>
+    <script src="assets/js/navRouting.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/anime.min.js"></script>
+    <script src="assets/js/insertGameFunctions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+    <script src="assets/js/histogram.js"></script>
+    <script src="assets/js/backToHome.js"></script>
+    <script src="assets/js/deleteChat.js"></script>
+    
+</body>
+
+</html>
