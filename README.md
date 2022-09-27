@@ -52,5 +52,7 @@ Il lato frontend del sito è stato realizzato tramite i seguenti componenti:
 ```
 Le informazioni tra doppi apici si recuperano con dalla propria piattaforma MongoDB, nella sezione `Connect > Connect with the MongoDB Shell`. Il sito fornirà un url con le informazioni necessarie: l'utente dovrà recuperare le singole informazioni e inserirle nel file `config.json`</code>.<br>
 La porta 5000 è solo un esempio.<br>
-4. Avviare l'applicazione tramite il comando `node ./server.js` o, in alternativa, `nodemon ./server.js`.<br>
-5. A questo punto il sito sarà hostato in locale, è possibile raggiungerlo tramite l'url `localhost:<PORTA>`.
+
+## Avvio
+Avviare l'applicazione tramite il comando `node ./server.js` o, in alternativa, `nodemon ./server.js`.<br>
+A questo punto il sito sarà hostato in locale, ed è possibile raggiungerlo tramite l'url `localhost:<PORTA>`.
