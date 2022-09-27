@@ -54,5 +54,5 @@ Le informazioni tra doppi apici si recuperano con dalla propria piattaforma Mong
 La porta 5000 è solo un esempio.<br>
 
 ## Avvio
-Avviare l'applicazione tramite il comando `node ./server.js` o, in alternativa, `nodemon ./server.js`.<br>
+Avviare l'applicazione tramite il comando `node ./server.js` oppure `nodemon ./server.js`.<br>
 A questo punto il sito sarà hostato in locale, ed è possibile raggiungerlo tramite l'url `localhost:<PORTA>`.
