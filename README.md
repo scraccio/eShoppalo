@@ -28,3 +28,29 @@ Il lato frontend del sito è stato realizzato tramite i seguenti componenti:
 - **ExpressJS** per la gestione dell'applicazione, delle chiamate AJAX (GET e POST) e del routing
 - **MongoDB** per conservare i dati relativi ai giochi, agli utenti e agli annunci
 - **Puppeteer** per eseguire lo scraping da PriceCharting.com, tramite il quale è possibile fare delle statistiche
+
+## Prerequisiti
+1. Un package manager (ad esempio npm)
+2. NodeJS per avviare il programma
+3. (Opzionale) Nodemon per riavviare il server automaticamente al momento del salvataggio
+4. Un database MongoDB contenente il catalogo di giochi Switch, implementabile grazie a delle [API non ufficiali](https://nintendo-switch-eshop.vercel.app/docs/Welcome)
+
+## Installazione
+1. Per utilizzare eShoppalo, per prima cosa si dovrà clonare la repository.<br>
+2. Tramite un Package Manager (ad esempio <code>npm</code>), è possibile installare tutte le dipendenze necessarie con il comando <code>npm i</code>.
+3. Fatto ciò, sarà necessario creare un file di configurazione chiamato <code>config.json</code> all'interno della root del progetto. Questo file dovrà contenere un oggetto JSON nel seguente formato:<br>
+```json
+{
+"database":{
+  "host": "<NOME_HOST>"
+  "username": "<NOME_UTENTE>",
+  "password": "<PASSWORD>",
+  "options": "<OPZIONI>"
+},
+"port": 5000
+}
+```
+Le informazioni tra doppi apici si recuperano con dalla propria piattaforma MongoDB, nella sezione `Connect > Connect with the MongoDB Shell`. Il sito fornirà un url con le informazioni necessarie: l'utente dovrà recuperare le singole informazioni e inserirle nel file `config.json`</code>.<br>
+La porta 5000 è solo un esempio.<br>
+4. Avviare l'applicazione tramite il comando `node ./server.js` o, in alternativa, `nodemon ./server.js`.<br>
+5. A questo punto il sito sarà hostato in locale, è possibile raggiungerlo tramite l'url `localhost:<PORTA>`.
