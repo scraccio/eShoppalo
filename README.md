@@ -33,7 +33,7 @@ Il lato frontend del sito è stato realizzato tramite i seguenti componenti:
 1. Un package manager (ad esempio npm)
 2. NodeJS per avviare il programma
 3. (Opzionale) Nodemon per riavviare il server automaticamente al momento del salvataggio
-4. Un database MongoDB, che sarà riempito con il catalogo di giochi Switch grazie a delle [API non ufficiali](https://nintendo-switch-eshop.vercel.app/docs/Welcome) in automatico, nel caso in cui esso risulta vuoto.
+4. Un database MongoDB, che sarà riempito automaticamente con il catalogo di giochi Switch grazie a delle [API non ufficiali](https://nintendo-switch-eshop.vercel.app/docs/Welcome).
 
 ## Installazione
 1. Per utilizzare eShoppalo, per prima cosa si dovrà clonare la repository.<br>
